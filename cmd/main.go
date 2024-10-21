@@ -1,9 +1,17 @@
 package main
 
 import (
-	"fmt"
+	"mediator-pattern-go/pkg/mediator"
 )
 
 func main() {
-	fmt.Println("Mediator Pattern Example")
+	concreteMediator := &mediator.ConcreteMediator{}
+	componentA := &mediator.ComponentA{}
+	componentB := &mediator.ComponentB{}
+
+	concreteMediator.SetComponentA(componentA)
+	concreteMediator.SetComponentB(componentB)
+
+	componentA.DoSomething()
+	componentB.DoSomethingElse()
 }

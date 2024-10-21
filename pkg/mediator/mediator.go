@@ -1,3 +1,6 @@
 package mediator
 
-// Mediator will be implemented in the next commits.
+// Mediator defines the interface for communication between components.
+type Mediator interface {
+	Notify(sender Component, event string)
+}
